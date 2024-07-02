@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>Hussein.NM.DateTimeToolkit</PackageId>
+    <Title>DateTimeToolkit</Title>
+    <Version>1.0.0</Version>
+    <Authors>Hussein NM</Authors>
+    <Company>DateTimeToolkit</Company>
+    <Product>DateTimeToolkit</Product>
+    <PackageIcon>calendar-icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/hoseinprg/DateTimeToolkit</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Extension, DateTime, Date, Time, Calendar, Helper</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+	<Summary>Comprehensive DateTime utilities for developers.</Summary>
+    <Description>The DateTime Extension Library offers over 100 methods, empowering developers with extensive DateTime functionality for diverse date and time manipulations.</Description>
+    <PackageProjectUrl>https://github.com/hoseinprg/DateTimeToolkit</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\assets\logo\calendar-icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
