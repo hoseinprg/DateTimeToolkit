@@ -1,15 +1,12 @@
-<p align="center">
-  <img width="128" align="center" src="/assets/logo/calendar-icon.png">
-</p>
-<h1 align="center">
-  DateTimeToolkit
-</h1>
-<p align="center">
-  Comprehensive DateTime utilities for developers.
-</p>
+![](https://raw.githubusercontent.com/hoseinprg/DateTimeToolkit/master/assets/logo/calendar-icon.png)
+
+DateTimeToolkit
+===============
+
+Comprehensive DateTime utilities for developers.
 
 # Overview
-The DateTime Extension Library provides a comprehensive set of approximately <b>100 extension</b> methods for the DateTime structure, enhancing its functionality for 
+The DateTime Extension Library provides a comprehensive set of approximately **100 extension** methods for the DateTime structure, enhancing its functionality for 
 a wide range of date and time operations. This library includes methods for calculating the start and end of different date ranges (days, weeks, months, years), 
 rounding dates to the nearest interval, checking if dates fall within specific ranges, generating lists of dates, and much more.
 
@@ -21,18 +18,18 @@ PM> Install-Package DateTimeToolkit
 ```
 
 # Features
-* <b>Start and End of Date Ranges:</b> Methods to get the start and end of days, weeks, months, and years.
-* <b>Rounding:</b> Methods to round dates to the nearest specified interval.
-* <b>Range Checking:</b> Methods to check if a date falls within a specified range.
-* <b>Date Generation:</b> Methods to generate lists of dates within a specific range.
-* <b>Occurrences:</b> Methods to get occurrences between two dates according to a specified interval.
-* <b>Week Number Calculation:</b> Methods to calculate the week number of a year for a given date.
-* <b>Custom Week Start:</b> Methods to get the start and end of weeks with a customizable start day.
+* **Start and End of Date Ranges:** Methods to get the start and end of days, weeks, months, and years.
+* **Rounding:** Methods to round dates to the nearest specified interval.
+* **Range Checking:** Methods to check if a date falls within a specified range.
+* **Date Generation:** Methods to generate lists of dates within a specific range.
+* **Occurrences:** Methods to get occurrences between two dates according to a specified interval.
+* **Week Number Calculation:** Methods to calculate the week number of a year for a given date.
+* **Custom Week Start:** Methods to get the start and end of weeks with a customizable start day.
 
 # Usage Examples
 Here are some usage examples for the extension methods provided in this library:
 
-* <b>Start and End of Date Ranges</b>
+* **Start and End of Date Ranges**
 ```csharp
 DateTime now = new DateTime(2023, 6, 1, 15, 30, 0);
 
@@ -68,7 +65,7 @@ DateTime endOfWeek = DateTimeRangeExtension.GetEndOfWeek(now, DayOfWeek.Monday);
 // Output: endOfWeek = 2023-06-04 00:00:00
 ```
 
-* <b>Rounding Dates</b>
+* **Rounding Dates**
 ```csharp
 DateTime dateTime = new DateTime(2023, 12, 24, 10, 35, 0);
 TimeSpan interval = new TimeSpan(0, 30, 0);
@@ -80,7 +77,7 @@ DateTime rounded = DateTimeCalculationExtension.RoundToNearestInterval(dateTime,
 // Output: rounded = 2023-12-24 10:30:00
 ```
 
-* <b>Range Checking</b>
+* **Range Checking**
 
 ```csharp
 DateTime date = new DateTime(2023, 12, 24);
@@ -93,7 +90,7 @@ bool isInRange = DateTimeRangeExtension.IsDateInRange(date, startDate, endDate);
 // Output: isInRange = true
 ```
 
-* <b>Date Generation</b>
+* **Date Generation**
 
 ```csharp
 DateTime startDate = new DateTime(2023, 12, 20);
@@ -109,7 +106,7 @@ List<DateTime> datesInRange = DateTimeRangeExtension.GetDatesInRange(startDate, 
 2023-12-24 00:00:00]
 ```
 
-* <b>Occurrences</b>
+* **Occurrences**
 
 ```csharp
 DateTime start = new DateTime(2023, 6, 1);
@@ -126,7 +123,7 @@ List<DateTime> occurrences = DateTimeRangeExtension.GetOccurrences(start, end, i
 2023-06-05 00:00:00]
 ```
 
-* <b>Week Number Calculation</b>
+* **Week Number Calculation**
 
 ```csharp
 DateTime dateTime = new DateTime(2023, 12, 24);
@@ -139,7 +136,7 @@ int weekNumber = DateTimeCalculationExtension.GetWeekOfYear(dateTime, culture);
 ```
 
 
-*<b>See [Unit Tests](https://github.com/hoseinprg/DateTimeToolkit/tree/master/test/DateTimeToolkit.Tests) in the project for more details and examples of all extensions.</b>*
+_**See [Unit Tests](https://github.com/hoseinprg/DateTimeToolkit/tree/master/test/DateTimeToolkit.Tests) in the project for more details and examples of all extensions.**_
 
 
 ## Contributing
