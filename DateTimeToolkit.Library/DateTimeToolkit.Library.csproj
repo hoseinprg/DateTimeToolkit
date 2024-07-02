@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageId>Hussein.NM.DateTimeToolkit</PackageId>
+    <PackageId>DateTimeToolkit</PackageId>
     <Title>DateTimeToolkit</Title>
     <Version>1.0.0</Version>
     <Authors>Hussein NM</Authors>
