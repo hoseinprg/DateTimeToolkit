@@ -128,7 +128,7 @@ int weekNumber = DateTimeCalculationExtension.GetWeekOfYear(dateTime, culture);
 ```
 
 
-_**See [Unit Tests](https://github.com/hoseinprg/DateTimeToolkit/tree/master/test/DateTimeToolkit.Tests) in the project for more details and examples of all extensions.**_
+_**See [Unit Tests](https://github.com/hoseinprg/DateTimeToolkit/blob/master/DateTimeToolkit.Tests) in the project for more details and examples of all extensions.**_
 
 
 ## Contributing
