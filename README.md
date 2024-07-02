@@ -99,11 +99,7 @@ DateTime endDate = new DateTime(2023, 12, 24);
 // Generate a list of dates within the specified range
 List<DateTime> datesInRange = DateTimeRangeExtension.GetDatesInRange(startDate, endDate);
 
-// Output: datesInRange = [2023-12-20 00:00:00,
-2023-12-21 00:00:00,
-2023-12-22 00:00:00,
-2023-12-23 00:00:00,
-2023-12-24 00:00:00]
+// Output: datesInRange = [2023-12-20 00:00:00, 2023-12-21 00:00:00, 2023-12-22 00:00:00, 2023-12-23 00:00:00, 2023-12-24 00:00:00]
 ```
 
 * **Occurrences**
@@ -116,11 +112,7 @@ TimeSpan interval = new TimeSpan(1, 0, 0, 0);
 // Get occurrences between the start and end dates
 List<DateTime> occurrences = DateTimeRangeExtension.GetOccurrences(start, end, interval);
 
-// Output: occurrences = [2023-06-01 00:00:00, 
-2023-06-02 00:00:00,
-2023-06-03 00:00:00, 
-2023-06-04 00:00:00,
-2023-06-05 00:00:00]
+// Output: occurrences = [2023-06-01 00:00:00, 2023-06-02 00:00:00, 2023-06-03 00:00:00, 2023-06-04 00:00:00, 2023-06-05 00:00:00]
 ```
 
 * **Week Number Calculation**
