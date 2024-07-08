@@ -19,5 +19,19 @@ namespace DateTimeToolkit.Tests
             // Assert
             Assert.Equal(new DateTime(2023, 6, 2), result);
         }
+
+        [Fact]
+        public void GetPreviousOccurrence_ValidInput_ReturnsPreviousOccurrence()
+        {
+            // Arrange
+            DateTime start = new DateTime(2023, 12, 25);
+            DayOfWeek dayOfWeek = DayOfWeek.Friday;
+
+            // Act
+            DateTime result = start.GetPreviousOccurrence(dayOfWeek);
+
+            // Assert
+            Assert.Equal(new DateTime(2023, 12, 22), result);
+        }
     }
 }

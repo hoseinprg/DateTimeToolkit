@@ -180,14 +180,31 @@ namespace DateTimeToolkit.Tests
 
             // Assert
             List<DateTime> expected = new List<DateTime>
-        {
-            new DateTime(2023, 12, 20),
-            new DateTime(2023, 12, 21),
-            new DateTime(2023, 12, 22),
-            new DateTime(2023, 12, 23),
-            new DateTime(2023, 12, 24)
-        };
+            {
+                new DateTime(2023, 12, 20),
+                new DateTime(2023, 12, 21),
+                new DateTime(2023, 12, 22),
+                new DateTime(2023, 12, 23),
+                new DateTime(2023, 12, 24)
+            };
             Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void GetOverlap_OverlappingRanges_ReturnsOverlap()
+        {
+            // Arrange
+            DateTime start1 = new DateTime(2023, 12, 25);
+            DateTime end1 = new DateTime(2023, 12, 30);
+            DateTime start2 = new DateTime(2023, 12, 28);
+            DateTime end2 = new DateTime(2024, 1, 2);
+
+            // Act
+            var result = DateTimeRangeExtension.GetOverlap(start1, end1, start2, end2);
+
+            // Assert
+            Assert.Equal(new DateTime(2023, 12, 28), result.Start);
+            Assert.Equal(new DateTime(2023, 12, 30), result.End);
         }
     }
 

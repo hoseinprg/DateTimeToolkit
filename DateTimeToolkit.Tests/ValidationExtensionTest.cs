@@ -1,12 +1,15 @@
 ﻿using DateTimeToolkit.Library.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using Xunit;
 
 namespace DateTimeToolkit.Tests
 {
     public class ValidationExtensionTest
     {
+        private readonly CultureInfo _enUsCulture = new CultureInfo("en-US");
+
         [Theory]
         [InlineData("2023-06-01", "yyyy-MM-dd", true)]
         [InlineData("2023/06/01", "yyyy-MM-dd", false)] // Invalid format
@@ -75,6 +78,17 @@ namespace DateTimeToolkit.Tests
 
             // Assert
             Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void IsBusinessDay_ValidInput_ReturnsTrueOrFalse()
+        {
+            // Arrange
+            DateTime date = new DateTime(2023, 12, 25);
+            List<DateTime> publicHolidays = new List<DateTime> { new DateTime(2023, 12, 25) };
+
+            // Act & Assert
+            Assert.False(date.IsBusinessDay(publicHolidays, _enUsCulture));
         }
     }
 }

@@ -72,6 +72,30 @@ namespace DateTimeToolkit.Library.Extensions
         }
 
         /// <summary>
+        /// Checks if the specified date is a business day.
+        /// </summary>
+        /// <param name="dateTime">The date to check.</param>
+        /// <param name="publicHolidays">A list of public holidays.</param>
+        /// <param name="culture">Culture info to determine weekend days (optional). If not provided, uses the default culture.</param>
+        /// <returns>True if the date is a business day, otherwise false.</returns>
+        /// <example>
+        /// Input: date=new DateTime(2023, 12, 25), publicHolidays=new List<DateTime> { new DateTime(2023, 12, 25) }
+        /// Output: false
+        /// </example>
+        public static bool IsBusinessDay(this DateTime dateTime, List<DateTime> publicHolidays, CultureInfo culture = null)
+        {
+            if (culture == null)
+                culture = _culture; // Use the static default culture
+
+            var weekendDays = DateTimeHelper.GetWeekendDaysForCulture(culture);
+
+            if (weekendDays.Contains(dateTime.DayOfWeek) || publicHolidays.Contains(dateTime.Date))
+                return false;
+
+            return true;
+        }
+
+        /// <summary>
         /// Checks if the specified date is a weekend or public holiday.
         /// </summary>
         /// <param name="dateTime">The date to check.</param>

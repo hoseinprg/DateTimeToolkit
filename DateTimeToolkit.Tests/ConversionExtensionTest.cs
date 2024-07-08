@@ -393,6 +393,19 @@ namespace DateTimeToolkit.Tests
             // Assert
             Assert.Equal("2023-12-24", result);
         }
+
+        [Fact]
+        public void ToUnixTimestamp_ValidInput_ReturnsUnixTimestamp()
+        {
+            // Arrange
+            DateTime inputDate = new DateTime(2023, 12, 25, 0, 0, 0, DateTimeKind.Utc);
+
+            // Act
+            long result = inputDate.ToUnixTimestamp();
+
+            // Assert
+            Assert.Equal(1703462400, result);
+        }
     }
 
 }

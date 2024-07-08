@@ -87,6 +87,21 @@ namespace DateTimeToolkit.Library.Extensions
         }
 
         /// <summary>
+        /// Gets the number of days between two DateTime objects.
+        /// </summary>
+        /// <param name="startDate">The start date.</param>
+        /// <param name="endDate">The end date.</param>
+        /// <returns>The number of days between the start date and end date.</returns>
+        /// <example>
+        /// Input: startDate=new DateTime(2023, 12, 25), endDate=new DateTime(2023, 12, 30)
+        /// Output: 5
+        /// </example>
+        public static int GetDaysBetween(this DateTime startDate, DateTime endDate)
+        {
+            return (endDate - startDate).Days;
+        }
+
+        /// <summary>
         /// Gets the week number of the year for the specified date.
         /// </summary>
         /// <param name="dateTime">The date to calculate the week number for.</param>

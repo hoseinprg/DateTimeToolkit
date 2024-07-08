@@ -415,5 +415,20 @@ namespace DateTimeToolkit.Library.Extensions
             CultureInfo culture = new CultureInfo(cultureName);
             return dateTime.ToString(format, culture);
         }
+
+        /// <summary>
+        /// Converts the DateTime to a Unix timestamp.
+        /// </summary>
+        /// <param name="dateTime">The DateTime object to convert.</param>
+        /// <returns>The Unix timestamp as a long.</returns>
+        /// <example>
+        /// Input: dateTime=new DateTime(2023, 12, 25, 0, 0, 0, DateTimeKind.Utc)
+        /// Output: 1703462400
+        /// </example>
+        public static long ToUnixTimestamp(this DateTime dateTime)
+        {
+            return ((DateTimeOffset)dateTime).ToUnixTimeSeconds();
+        }
+
     }
 }

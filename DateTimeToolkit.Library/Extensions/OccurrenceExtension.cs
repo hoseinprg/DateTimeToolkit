@@ -18,5 +18,22 @@ namespace DateTimeToolkit.Library.Extensions
         {
             return dateTime.Add(interval);
         }
+
+        /// <summary>
+        /// Gets the previous occurrence of a specified day of the week.
+        /// </summary>
+        /// <param name="start">The start date.</param>
+        /// <param name="dayOfWeek">The day of the week.</param>
+        /// <returns>The previous occurrence of the specified day of the week.</returns>
+        /// <example>
+        /// Input: start=new DateTime(2023, 12, 25), dayOfWeek=DayOfWeek.Friday
+        /// Output: new DateTime(2023, 12, 22)
+        /// </example>
+        public static DateTime GetPreviousOccurrence(this DateTime start, DayOfWeek dayOfWeek)
+        {
+            int daysToSubtract = ((int)start.DayOfWeek - (int)dayOfWeek + 7) % 7;
+            return start.AddDays(daysToSubtract == 0 ? -7 : -daysToSubtract);
+        }
+
     }
 }

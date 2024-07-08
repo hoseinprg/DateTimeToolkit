@@ -291,6 +291,20 @@ namespace DateTimeToolkit.Tests
             // Assert
             Assert.Equal(TimeSpan.FromSeconds(seconds), result);
         }
+
+        [Fact]
+        public void GetDaysBetween_ValidInput_ReturnsNumberOfDays()
+        {
+            // Arrange
+            DateTime startDate = new DateTime(2023, 12, 25);
+            DateTime endDate = new DateTime(2023, 12, 30);
+
+            // Act
+            int result = startDate.GetDaysBetween(endDate);
+
+            // Assert
+            Assert.Equal(5, result);
+        }
     }
 
 }

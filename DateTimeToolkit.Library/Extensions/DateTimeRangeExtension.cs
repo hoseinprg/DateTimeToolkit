@@ -178,5 +178,28 @@ namespace DateTimeToolkit.Library.Extensions
             }
             return dates;
         }
+
+        /// <summary>
+        /// Gets the overlap between two date ranges.
+        /// </summary>
+        /// <param name="start1">The start of the first date range.</param>
+        /// <param name="end1">The end of the first date range.</param>
+        /// <param name="start2">The start of the second date range.</param>
+        /// <param name="end2">The end of the second date range.</param>
+        /// <returns>A tuple containing the start and end of the overlapping date range, or null if there is no overlap.</returns>
+        /// <example>
+        /// Input: start1=new DateTime(2023, 12, 25), end1=new DateTime(2023, 12, 30), start2=new DateTime(2023, 12, 28), end2=new DateTime(2024, 1, 2)
+        /// Output: (new DateTime(2023, 12, 28), new DateTime(2023, 12, 30))
+        /// </example>
+        public static (DateTime? Start, DateTime? End) GetOverlap(DateTime start1, DateTime end1, DateTime start2, DateTime end2)
+        {
+            if (end1 < start2 || end2 < start1)
+                return (null, null);
+
+            DateTime overlapStart = start1 > start2 ? start1 : start2;
+            DateTime overlapEnd = end1 < end2 ? end1 : end2;
+            return (overlapStart, overlapEnd);
+        }
+
     }
 }
