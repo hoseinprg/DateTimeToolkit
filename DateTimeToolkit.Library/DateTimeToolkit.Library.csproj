@@ -18,6 +18,8 @@
 	<Summary>Comprehensive DateTime utilities for developers.</Summary>
     <Description>The DateTime Extension Library offers over 100 methods, empowering developers with extensive DateTime functionality for diverse date and time manipulations.</Description>
     <PackageProjectUrl>https://github.com/hoseinprg/DateTimeToolkit</PackageProjectUrl>
+    <PackageReleaseNotes>New extension methods: ToUnixTimestamp, GetDaysBetween, GetOverlap, 
+GetPreviousOccurrence, IsBusinessDay, IsOnOrBefore, IsOnOrAfter</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
